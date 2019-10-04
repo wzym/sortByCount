@@ -13,7 +13,7 @@ public class CountSort {
         //BufferedReader bf1 = new BufferedReader(new InputStreamReader(System.in));
         var size = Integer.parseInt(bf.readLine());
         var tokens = bf.readLine().split(" ");
-        var countKeeper = new byte[10];
+        var countKeeper = new short[10];
         for (int i = 0; i < size; i++) {
             var curNumber = Byte.parseByte(tokens[i]);
             countKeeper[curNumber]++;
@@ -31,7 +31,7 @@ public class CountSort {
         System.out.println(sb.toString());
     }
 
-    private byte[] fillResult(byte[] countKeeper, int size) {
+    private byte[] fillResult(short[] countKeeper, int size) {
         var result = new byte[size];
         var pointer = 0;
         for (int i = 0; i < 10; i++) {
